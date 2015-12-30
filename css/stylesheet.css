@@ -1,0 +1,28 @@
+body{
+  background-color: black;
+}
+
+#propic{
+  width: 50%;
+  height: 50%;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+#titleText{
+  color: #e4e4e4;
+}
+
+.glyph-title{
+  color: #e4e4e4;
+  font-size: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
+}
+
+.titleContent{
+  text-align:center;
+  margin-top: 40%;
+
+}
