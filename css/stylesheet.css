@@ -17,14 +17,26 @@ body{
   margin-right: auto;
   display: inline;
 }
+.glyph-title .active{
+  color: blue;
+}
 
-#titleContent{
+#titleContent{text-align: center;}
+#splash{
   color: #e4e4e4;
-  text-align:center;
   margin-top: 40%;
-  margin-bottom: 40%;
+  margin-bottom: 5%;
 }
 
 .glyph-title.glyphicon-user:hover:before{content:"About Me";}
 .glyph-title.glyphicon-list-alt:hover:before{content:"Resume";}
 .glyph-title.glyphicon-comment:hover:before{content:"Contact";}
+
+#bodyContent{
+  color: white;
+}
+
+#menuBar{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
