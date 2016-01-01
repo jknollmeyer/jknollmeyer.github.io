@@ -9,9 +9,6 @@ body{
   margin: 0 auto;
 }
 
-#titleText{
-  color: #e4e4e4;
-}
 
 .glyph-title{
   color: #e4e4e4;
@@ -21,8 +18,13 @@ body{
   display: inline;
 }
 
-.titleContent{
+#titleContent{
+  color: #e4e4e4;
   text-align:center;
   margin-top: 40%;
-
+  margin-bottom: 40%;
 }
+
+.glyph-title.glyphicon-user:hover:before{content:"About Me";}
+.glyph-title.glyphicon-list-alt:hover:before{content:"Resume";}
+.glyph-title.glyphicon-comment:hover:before{content:"Contact";}

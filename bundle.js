@@ -2,12 +2,13 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+
 var PageHTML = React.createClass({displayName: "PageHTML",
   render: function(){
     return(
-      React.createElement("div", {className: "titleContent"}, 
+      React.createElement("div", {id: "titleContent"}, 
         React.createElement("img", {src: "img/propic.jpg", id: "propic", className: "img-resposive"}), 
-        React.createElement("h2", {id: "titleText"}, "Hi, my name is John and I make stuff"), 
+        React.createElement("h2", null, "Hi, my name is John and I make stuff"), 
 
         React.createElement("div", {className: "row"}, 
           React.createElement("div", {className: "col-xs-4"}, 
