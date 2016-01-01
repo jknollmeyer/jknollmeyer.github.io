@@ -1,7 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var AboutContent = require('./js/about_content.jsx')
-
+var ResumeContent = require('./js/resume_content.jsx')
+var ContactContent = require('./js/contact_content.jsx')
 var BodyContent = React.createClass({
   render: function(){
     if(this.props.status == "splash")
@@ -14,11 +15,11 @@ var BodyContent = React.createClass({
       )
     if(this.props.status == "Resume")
       return (
-        <span>RESUME</span>
+        <ResumeContent />
       )
     if(this.props.status == "Contact")
       return(
-        <span>CONTACT</span>
+        <ContactContent />
       )
   }
 });
