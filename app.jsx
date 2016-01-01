@@ -89,36 +89,38 @@ var PageHTML = React.createClass({
       //Change the height of the body
       this.setState({bodyStyle: {height: '100vh'}});
       //Fade the menu bar to add the home button
-      $("#menuBar").fadeOut(function(){
+      $("#menuBar").fadeOut(500,function(){
         //Change the current route, so that the new menubar gets rendered
         this.setState({status: route});
         $("#menuBar").fadeIn(function(){
           $("html, body").animate({
             scrollTop: $('#menuBar').offset().top
-          },1000);
-          $('#splash').fadeOut(1000,function(){
+          },500);
+          $('#splash').fadeOut(500,function(){
             window.scrollTo(0,0);
           });
         });
 
-        $("#bodyContent").fadeIn();
+        $("#bodyContent").fadeIn(500);
       }.bind(this));
 
     //Going to the splash
     }else if(route == "Splash"){
       $('#splash').fadeIn({
-        "duration": 5000,
+        "duration": 500,
         "start": function(e){
           //Scroll to menubar, otherwise the screen will jump because of the
           //newly rendered splash screen at the top
           $('html, body').animate({scrollTop: $('#menuBar').offset().top}, 0);
-          $('html, body').animate({scrollTop: 0}, 1000);
+          $('html, body').animate({scrollTop: 0}, 500);
 
         }
       });
       //$("html, body").animate({scrollTop: 0},'slow');
-      $('#bodyContent').fadeOut(1000, function(){
+      $("#menuBar").fadeOut(500);
+      $('#bodyContent').fadeOut(500, function(){
         this.setState({bodyStyle: {}, status: route});
+        $("#menuBar").fadeIn(500);
       }.bind(this));
     }
 

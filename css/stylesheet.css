@@ -31,6 +31,7 @@ body{
 .glyph-title.glyphicon-user:hover:before{content:"About Me";}
 .glyph-title.glyphicon-list-alt:hover:before{content:"Resume";}
 .glyph-title.glyphicon-comment:hover:before{content:"Contact";}
+.glyph-title.glyphicon-home:hover:before{content:"Home";}
 
 #bodyContent{
   color: white;
@@ -39,4 +40,10 @@ body{
 #menuBar{
   padding-top: 3%;
   padding-bottom: 3%;
+}
+.resume-box{
+  font-size: 14pt;
+}
+.resume-box h2{
+  color: #3399ff;
 }

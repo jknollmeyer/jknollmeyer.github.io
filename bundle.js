@@ -90,36 +90,38 @@ var PageHTML = React.createClass({displayName: "PageHTML",
       //Change the height of the body
       this.setState({bodyStyle: {height: '100vh'}});
       //Fade the menu bar to add the home button
-      $("#menuBar").fadeOut(function(){
+      $("#menuBar").fadeOut(500,function(){
         //Change the current route, so that the new menubar gets rendered
         this.setState({status: route});
         $("#menuBar").fadeIn(function(){
           $("html, body").animate({
             scrollTop: $('#menuBar').offset().top
-          },1000);
-          $('#splash').fadeOut(1000,function(){
+          },500);
+          $('#splash').fadeOut(500,function(){
             window.scrollTo(0,0);
           });
         });
 
-        $("#bodyContent").fadeIn();
+        $("#bodyContent").fadeIn(500);
       }.bind(this));
 
     //Going to the splash
     }else if(route == "Splash"){
       $('#splash').fadeIn({
-        "duration": 5000,
+        "duration": 500,
         "start": function(e){
           //Scroll to menubar, otherwise the screen will jump because of the
           //newly rendered splash screen at the top
           $('html, body').animate({scrollTop: $('#menuBar').offset().top}, 0);
-          $('html, body').animate({scrollTop: 0}, 1000);
+          $('html, body').animate({scrollTop: 0}, 500);
 
         }
       });
       //$("html, body").animate({scrollTop: 0},'slow');
-      $('#bodyContent').fadeOut(1000, function(){
+      $("#menuBar").fadeOut(500);
+      $('#bodyContent').fadeOut(500, function(){
         this.setState({bodyStyle: {}, status: route});
+        $("#menuBar").fadeIn(500);
       }.bind(this));
     }
 
@@ -169,7 +171,55 @@ var React = require('react')
 module.exports = React.createClass({displayName: "exports",
   render: function(){
     return(
-      React.createElement("span", null, "Resume")
+      React.createElement("div", {className: "row"}, 
+        React.createElement("div", {className: "col-xs-5"}, 
+          React.createElement("div", {id: "TechnicalSkills", className: "resume-box"}, 
+            React.createElement("h2", null, "Technical Skills"), 
+              React.createElement("h4", null, "Programming Languages"), 
+              React.createElement("ul", null, 
+                React.createElement("li", null, "C++"), 
+                React.createElement("li", null, "C"), 
+                React.createElement("li", null, "Python"), 
+                React.createElement("li", null, "Java"), 
+                React.createElement("li", null, "MATLAB"), 
+                React.createElement("li", null, "x86 Assembly")
+              ), 
+              React.createElement("h4", null, "Web and Software Technologies"), 
+              React.createElement("ul", null, 
+                React.createElement("li", null, "Git"), 
+                React.createElement("li", null, "HTML"), 
+                React.createElement("li", null, "CSS"), 
+                React.createElement("li", null, "JavaScript"), 
+                React.createElement("li", null, "React"), 
+                React.createElement("li", null, "Node.js Express"), 
+                React.createElement("li", null, "Angular.js"), 
+                React.createElement("li", null, "MongoDB"), 
+                React.createElement("li", null, "Django")
+              ), 
+              React.createElement("h4", null, "Hardware Technologies"), 
+              React.createElement("ul", null, 
+                React.createElement("li", null, "Arduino"), 
+                React.createElement("li", null, "VHDL")
+              ), 
+              React.createElement("h4", null, "Other Skills and Backgrounds"), 
+                React.createElement("ul", null, 
+                  React.createElement("li", null, "Machine Learning"), 
+                  React.createElement("li", null, "Scientific Writing"), 
+                  React.createElement("li", null, "Medical Imaging")
+                )
+          )
+        ), 
+        React.createElement("div", {className: "col-xs-7"}, 
+          React.createElement("div", {id: "WorkExperience", className: "resume-box"}, 
+            React.createElement("h2", null, "Work Experience"), 
+              React.createElement("ul", null, 
+                React.createElement("li", null, "Foo"), 
+                React.createElement("li", null, "Bar"), 
+                React.createElement("li", null, "Baz")
+              )
+          )
+        )
+      )
     )
   }
 })
