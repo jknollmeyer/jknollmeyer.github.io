@@ -17,8 +17,8 @@ body{
   margin-right: auto;
   display: inline;
 }
-.glyph-title .active{
-  color: blue;
+.glyph-title.active{
+  color: #3399ff;
 }
 
 #titleContent{text-align: center;}

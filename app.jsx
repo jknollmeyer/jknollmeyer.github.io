@@ -8,15 +8,15 @@ var BodyContent = React.createClass({
       return (
         <div></div>
       )
-    if(this.props.status == "about")
+    if(this.props.status == "AboutMe")
       return (
         <AboutContent />
       )
-    if(this.props.status == "resume")
+    if(this.props.status == "Resume")
       return (
         <span>RESUME</span>
       )
-    if(this.props.status == "contact")
+    if(this.props.status == "Contact")
       return(
         <span>CONTACT</span>
       )
@@ -33,8 +33,8 @@ var MenuItem = React.createClass({
     if(this.props.id == "Contact") className += " glyphicon-comment";
 
     return(
-      <div className="col-xs-4" onClick={this.props.onClick}>
-        <span className={className}></span>
+      <div className="col-xs-4">
+        <span className={className} onClick={this.props.onClick}></span>
       </div>
     )
   }
@@ -45,9 +45,9 @@ var PageHTML = React.createClass({
   },
   render: function(){
     //Prepend arguments for menuclick
-    var aboutClick = this.menuClick.bind(this, 'about');
-    var resumeClick = this.menuClick.bind(this, 'resume');
-    var contactClick = this.menuClick.bind(this, 'contact');
+    var aboutClick = this.menuClick.bind(this, 'AboutMe');
+    var resumeClick = this.menuClick.bind(this, 'Resume');
+    var contactClick = this.menuClick.bind(this, 'Contact');
     return(
       <div>
         <div id="titleContent">
@@ -68,7 +68,8 @@ var PageHTML = React.createClass({
     );
   },
   menuClick: function(route, e){
-
+    $(".glyph-title").removeClass("active");
+    e.target.className += " active"
     this.setState({bodyStyle: {height: '100vh'}});
     $("#bodyContent").fadeOut(function(){
       this.setState({status: route});

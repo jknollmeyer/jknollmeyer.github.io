@@ -9,15 +9,15 @@ var BodyContent = React.createClass({displayName: "BodyContent",
       return (
         React.createElement("div", null)
       )
-    if(this.props.status == "about")
+    if(this.props.status == "AboutMe")
       return (
         React.createElement(AboutContent, null)
       )
-    if(this.props.status == "resume")
+    if(this.props.status == "Resume")
       return (
         React.createElement("span", null, "RESUME")
       )
-    if(this.props.status == "contact")
+    if(this.props.status == "Contact")
       return(
         React.createElement("span", null, "CONTACT")
       )
@@ -34,8 +34,8 @@ var MenuItem = React.createClass({displayName: "MenuItem",
     if(this.props.id == "Contact") className += " glyphicon-comment";
 
     return(
-      React.createElement("div", {className: "col-xs-4", onClick: this.props.onClick}, 
-        React.createElement("span", {className: className})
+      React.createElement("div", {className: "col-xs-4"}, 
+        React.createElement("span", {className: className, onClick: this.props.onClick})
       )
     )
   }
@@ -46,9 +46,9 @@ var PageHTML = React.createClass({displayName: "PageHTML",
   },
   render: function(){
     //Prepend arguments for menuclick
-    var aboutClick = this.menuClick.bind(this, 'about');
-    var resumeClick = this.menuClick.bind(this, 'resume');
-    var contactClick = this.menuClick.bind(this, 'contact');
+    var aboutClick = this.menuClick.bind(this, 'AboutMe');
+    var resumeClick = this.menuClick.bind(this, 'Resume');
+    var contactClick = this.menuClick.bind(this, 'Contact');
     return(
       React.createElement("div", null, 
         React.createElement("div", {id: "titleContent"}, 
@@ -69,7 +69,8 @@ var PageHTML = React.createClass({displayName: "PageHTML",
     );
   },
   menuClick: function(route, e){
-
+    $(".glyph-title").removeClass("active");
+    e.target.className += " active"
     this.setState({bodyStyle: {height: '100vh'}});
     $("#bodyContent").fadeOut(function(){
       this.setState({status: route});
