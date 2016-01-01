@@ -2,27 +2,50 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+var MenuItem = React.createClass({displayName: "MenuItem",
+  handleClick: function(i){
+    console.log("You clicked: " + this.props.id);
+  },
+  render: function(){
+    var className = "glyphicon glyph-title"
+    if(this.props.id == "AboutMe") className += " glyphicon-user";
+    if(this.props.id == "Resume") className += " glyphicon-list-alt";
+    if(this.props.id == "Contact") className += " glyphicon-comment";
 
+    return(
+      React.createElement("div", {className: "col-xs-4", onClick: this.props.onClick}, 
+        React.createElement("span", {className: className})
+      )
+    )
+  }
+});
 var PageHTML = React.createClass({displayName: "PageHTML",
+  getInitialState: function(){
+    return {bodyContent: ''};
+  },
   render: function(){
     return(
-      React.createElement("div", {id: "titleContent"}, 
-        React.createElement("img", {src: "img/propic.jpg", id: "propic", className: "img-resposive"}), 
-        React.createElement("h2", null, "Hi, my name is John and I make stuff"), 
 
-        React.createElement("div", {className: "row"}, 
-          React.createElement("div", {className: "col-xs-4"}, 
-            React.createElement("span", {className: "glyphicon glyphicon-user glyph-title"})
-          ), 
-          React.createElement("div", {className: "col-xs-4"}, 
-            React.createElement("span", {className: "glyphicon glyphicon-list-alt glyph-title"})
-          ), 
-          React.createElement("div", {className: "col-xs-4"}, 
-            React.createElement("span", {className: "glyphicon glyphicon-comment glyph-title"})
+      React.createElement("div", null, 
+        React.createElement("div", {id: "titleContent"}, 
+          React.createElement("img", {src: "img/propic.jpg", id: "propic", className: "img-resposive"}), 
+          React.createElement("h2", null, "Hi, my name is John and I make stuff"), 
+
+          React.createElement("div", {className: "row"}, 
+            React.createElement(MenuItem, {id: "AboutMe", onClick: this.handleAboutClick}), 
+            React.createElement(MenuItem, {id: "Resume"}), 
+            React.createElement(MenuItem, {id: "Contact"})
           )
+        ), 
+        React.createElement("div", {id: "bodyContent"}
+
         )
       )
     );
+  },
+  handleAboutClick: function(e){
+    console.log("foo");
+
   }
 });
 

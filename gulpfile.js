@@ -12,12 +12,19 @@ gulp.task('js', function(){
   // Browserify/bundle the JS
   browserify(paths.app_js)
     .transform(reactify)
-    .bundle()
+    .bundle().on('error', onError)
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('./'));
+
+
 });
 
 gulp.task('watch', function(){
   gulp.watch(paths.app_js, ['js']);
 })
 gulp.task('default', ['watch']);
+
+function onError(err){
+  console.log(err);
+  this.emit('end');
+}
