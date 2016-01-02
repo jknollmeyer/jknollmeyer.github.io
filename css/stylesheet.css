@@ -1,15 +1,26 @@
 body{
+  font-family: "Verdana", sans-serif;
   background-color: black;
 }
-
+#bodyContent{
+  color: white;
+}
+#menuBar{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
 #propic{
   width: 50%;
   height: 50%;
   border-radius: 15px;
   margin: 0 auto;
 }
-
-
+#titleContent{text-align: center;}
+#splash{
+  color: #e4e4e4;
+  margin-top: 40%;
+  margin-bottom: 5%;
+}
 .glyph-title{
   color: #e4e4e4;
   font-size: 2em;
@@ -20,30 +31,11 @@ body{
 .glyph-title.active{
   color: #3399ff;
 }
-
-#titleContent{text-align: center;}
-#splash{
-  color: #e4e4e4;
-  margin-top: 40%;
-  margin-bottom: 5%;
-}
-
 .glyph-title.glyphicon-user:hover:before{content:"About Me";}
 .glyph-title.glyphicon-list-alt:hover:before{content:"Resume";}
 .glyph-title.glyphicon-comment:hover:before{content:"Contact";}
 .glyph-title.glyphicon-home:hover:before{content:"Home";}
 
-#bodyContent{
-  color: white;
-}
-
-#menuBar{
-  padding-top: 3%;
-  padding-bottom: 3%;
-}
-.resume-box{
-  font-size: 14pt;
-}
-.resume-box h2{
-  color: #3399ff;
-}
+.resume-box{ font-size: 12pt;}
+.resume-box h2{ color: #3399ff;}
+.work-date{position:absolute; right: 0em; font-style: italic;}

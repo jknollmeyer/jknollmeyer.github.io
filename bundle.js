@@ -172,53 +172,92 @@ module.exports = React.createClass({displayName: "exports",
   render: function(){
     return(
       React.createElement("div", {className: "row"}, 
-        React.createElement("div", {className: "col-xs-5"}, 
-          React.createElement("div", {id: "TechnicalSkills", className: "resume-box"}, 
-            React.createElement("h2", null, "Technical Skills"), 
-              React.createElement("h4", null, "Programming Languages"), 
+        /*Box for skills*/
+        React.createElement("div", {id: "TechnicalSkills", className: "resume-box col-sm-4 col-xs-12"}, 
+          React.createElement("h2", null, "Technical Skills"), 
+            React.createElement("h4", null, "Programming Languages"), 
+            React.createElement("ul", null, 
+              React.createElement("li", null, "C++"), 
+              React.createElement("li", null, "C"), 
+              React.createElement("li", null, "Python"), 
+              React.createElement("li", null, "Java"), 
+              React.createElement("li", null, "MATLAB"), 
+              React.createElement("li", null, "x86 Assembly")
+            ), 
+            React.createElement("h4", null, "Web and Software Technologies"), 
+            React.createElement("ul", null, 
+              React.createElement("li", null, "Git"), 
+              React.createElement("li", null, "HTML"), 
+              React.createElement("li", null, "CSS"), 
+              React.createElement("li", null, "JavaScript"), 
+              React.createElement("li", null, "React"), 
+              React.createElement("li", null, "Node.js Express"), 
+              React.createElement("li", null, "Angular.js"), 
+              React.createElement("li", null, "MongoDB"), 
+              React.createElement("li", null, "Django")
+            ), 
+            React.createElement("h4", null, "Hardware Technologies"), 
+            React.createElement("ul", null, 
+              React.createElement("li", null, "Arduino"), 
+              React.createElement("li", null, "VHDL")
+            ), 
+            React.createElement("h4", null, "Other Skills and Backgrounds"), 
               React.createElement("ul", null, 
-                React.createElement("li", null, "C++"), 
-                React.createElement("li", null, "C"), 
-                React.createElement("li", null, "Python"), 
-                React.createElement("li", null, "Java"), 
-                React.createElement("li", null, "MATLAB"), 
-                React.createElement("li", null, "x86 Assembly")
-              ), 
-              React.createElement("h4", null, "Web and Software Technologies"), 
-              React.createElement("ul", null, 
-                React.createElement("li", null, "Git"), 
-                React.createElement("li", null, "HTML"), 
-                React.createElement("li", null, "CSS"), 
-                React.createElement("li", null, "JavaScript"), 
-                React.createElement("li", null, "React"), 
-                React.createElement("li", null, "Node.js Express"), 
-                React.createElement("li", null, "Angular.js"), 
-                React.createElement("li", null, "MongoDB"), 
-                React.createElement("li", null, "Django")
-              ), 
-              React.createElement("h4", null, "Hardware Technologies"), 
-              React.createElement("ul", null, 
-                React.createElement("li", null, "Arduino"), 
-                React.createElement("li", null, "VHDL")
-              ), 
-              React.createElement("h4", null, "Other Skills and Backgrounds"), 
-                React.createElement("ul", null, 
-                  React.createElement("li", null, "Machine Learning"), 
-                  React.createElement("li", null, "Scientific Writing"), 
-                  React.createElement("li", null, "Medical Imaging")
-                )
-          )
-        ), 
-        React.createElement("div", {className: "col-xs-7"}, 
-          React.createElement("div", {id: "WorkExperience", className: "resume-box"}, 
-            React.createElement("h2", null, "Work Experience"), 
-              React.createElement("ul", null, 
-                React.createElement("li", null, "Foo"), 
-                React.createElement("li", null, "Bar"), 
-                React.createElement("li", null, "Baz")
+                React.createElement("li", null, "Machine Learning"), 
+                React.createElement("li", null, "Scientific Writing"), 
+                React.createElement("li", null, "Medical Imaging")
               )
+        ), 
+        /*Box for work experience */
+        React.createElement("div", {id: "WorkExperience", className: "resume-box col-sm-8 col-xs-12"}, 
+          React.createElement("h2", null, "Work Experience"), 
+          React.createElement("h4", null, React.createElement("span", null, "Research Assistant at BU PEAC Lab"), 
+              React.createElement("span", {className: "work-date"}, "April 2015 - Present")), 
+            React.createElement("ul", null, 
+              React.createElement("li", null)
+            ), 
+          React.createElement("h4", null, React.createElement("span", null, "Imaging R&D Intern at Neurologica"), 
+              React.createElement("span", {className: "work-date"}, "May 2014 - August 2014")), 
+            React.createElement("ul", null, 
+              React.createElement("li", null, "Programmed a tool in C++ for predicting the level of CT Quantum Noise in water phantoms based on scan parameters and predicting parameters required to meet noise target"), 
+              React.createElement("li", null, "Wrote 2 reports on experiments which tested the effect of scanner parameters on CT Quantum Noise")
+            )
+          ), 
+          /* box for extracurricular activities */
+          React.createElement("div", {id: "ExtracurricularBox", className: "resume-box col-sm-8 col-xs-12"}, 
+            React.createElement("h2", null, "Extracurricular Involvement"), 
+            React.createElement("h4", null, 
+              React.createElement("span", null, "Microsoft Student Partner"), 
+              React.createElement("span", {className: "work-date"}, "September 2015 - Present")
+            ), 
+            React.createElement("h4", null, 
+                React.createElement("span", null, "Assistant Director of BostonHacks"), 
+                React.createElement("span", {className: "work-date"}, "April 2015 - Present")
+            ), 
+            React.createElement("ul", null, 
+              React.createElement("li", null, "Reserve venue spaces for 400 hackers to cover 24 hour hackathon"), 
+              React.createElement("li", null, "Solicit recruiters and industry representatives to meet obtain sponsorhip for event"), 
+              React.createElement("li", null, "Move supplies, set up props & decorations, and perform other necessary handywork in high stress environment during the 24hr event")
+            ), 
+              React.createElement("ul", null, 
+                React.createElement("li", null, "Run workshops on-campus to educate students on Microsoft Technologies and other tech-related skills"), 
+                React.createElement("li", null, "Attend hackathons and mentor hackers to develop their understanding technology")
+              ), 
+            React.createElement("h4", null, 
+              React.createElement("span", null, "Treasurer of MakeBU"), 
+              React.createElement("span", {className: "work-date"}, "May 2015 - Present")
+            ), 
+            React.createElement("ul", null, 
+              React.createElement("li", null, "Filed and submitted funding requests to Student Activities Organization to cover ~$70,000 hackathon budget"), 
+              React.createElement("li", null)
+            )
+
+          ), 
+          /*box for college education */
+          React.createElement("div", {id: "EducationBox", className: "resume-box col-sm-4 col-xs-12"}, 
+            React.createElement("h2", null, "Education")
           )
-        )
+
       )
     )
   }
