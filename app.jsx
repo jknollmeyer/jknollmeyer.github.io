@@ -87,7 +87,7 @@ var PageHTML = React.createClass({
     //If we are leaving the splash page
     if(this.state.status == "Splash"){
       //Change the height of the body
-      this.setState({bodyStyle: {height: '100vh'}});
+      this.setState({bodyStyle: {height: '90vh'}});
       //Fade the menu bar to add the home button
       $("#menuBar").fadeOut(500,function(){
         //Change the current route, so that the new menubar gets rendered

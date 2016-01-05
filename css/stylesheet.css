@@ -9,6 +9,12 @@ body{
   padding-top: 3%;
   padding-bottom: 3%;
 }
+#footer{
+  color: grey;
+  font-size: 14pt;
+  margin-top: 10%;
+  text-align: center;
+}
 #propic{
   width: 50%;
   height: 50%;

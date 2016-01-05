@@ -101,6 +101,9 @@ module.exports = React.createClass({
 
 
           </div>
+          <div id="footer" className="col-xs-12">
+            FOFOFOFO
+          </div>
       </div>
     )
   }

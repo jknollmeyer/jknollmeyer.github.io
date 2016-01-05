@@ -23,9 +23,12 @@ module.exports = React.createClass({
           GitHub <img src="img/github2.png" />
 
         </a></p>
-      <p><a href="http://www.linkedin.com/in/jknollmeyer" style={{color: "white"}}>
-          LinkedIn <img src="img/linkedin.png"/>
-      </a></p>
+        <p><a href="http://www.linkedin.com/in/jknollmeyer" style={{color: "white"}}>
+            LinkedIn <img src="img/linkedin.png"/>
+        </a></p>
+        <div id="footer">
+          FOFOFOFO
+        </div>
       </div>
     )
   }

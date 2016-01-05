@@ -88,7 +88,7 @@ var PageHTML = React.createClass({displayName: "PageHTML",
     //If we are leaving the splash page
     if(this.state.status == "Splash"){
       //Change the height of the body
-      this.setState({bodyStyle: {height: '100vh'}});
+      this.setState({bodyStyle: {height: '90vh'}});
       //Fade the menu bar to add the home button
       $("#menuBar").fadeOut(500,function(){
         //Change the current route, so that the new menubar gets rendered
@@ -168,9 +168,12 @@ module.exports = React.createClass({displayName: "exports",
           "GitHub ", React.createElement("img", {src: "img/github2.png"})
 
         )), 
-      React.createElement("p", null, React.createElement("a", {href: "http://www.linkedin.com/in/jknollmeyer", style: {color: "white"}}, 
-          "LinkedIn ", React.createElement("img", {src: "img/linkedin.png"})
-      ))
+        React.createElement("p", null, React.createElement("a", {href: "http://www.linkedin.com/in/jknollmeyer", style: {color: "white"}}, 
+            "LinkedIn ", React.createElement("img", {src: "img/linkedin.png"})
+        )), 
+        React.createElement("div", {id: "footer"}, 
+          "FOFOFOFO"
+        )
       )
     )
   }
@@ -289,6 +292,9 @@ module.exports = React.createClass({displayName: "exports",
             )
 
 
+          ), 
+          React.createElement("div", {id: "footer", className: "col-xs-12"}, 
+            "FOFOFOFO"
           )
       )
     )
