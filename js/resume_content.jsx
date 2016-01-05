@@ -26,6 +26,7 @@ module.exports = React.createClass({
               <li>Angular.js</li>
               <li>MongoDB</li>
               <li>Django</li>
+              <li>Scikit-learn</li>
             </ul>
             <h4>Hardware Technologies</h4>
             <ul>
@@ -37,6 +38,7 @@ module.exports = React.createClass({
                 <li>Machine Learning</li>
                 <li>Scientific Writing</li>
                 <li>Medical Imaging</li>
+                <li>Cloud Computing</li>
               </ul>
         </div>
         {/*Box for work experience */}
@@ -45,7 +47,9 @@ module.exports = React.createClass({
           <h4><span>Research Assistant at BU PEAC Lab</span>
               <span className="work-date">April 2015 - Present</span></h4>
             <ul>
-              <li></li>
+              <li>Create Bash scripts to collect filesystem data from application installations from Virtual Machines in Google Compute Engine</li>
+              <li>Create Python scripts for labeling experimental data using scit-kit learn</li>
+              <li>Describe experimental methodology in academic research paper</li>
             </ul>
           <h4><span>Imaging R&D Intern at Neurologica</span>
               <span className="work-date">May 2014 - August 2014</span></h4>
@@ -61,6 +65,10 @@ module.exports = React.createClass({
               <span>Microsoft Student Partner</span>
               <span className="work-date">September 2015 - Present</span>
             </h4>
+            <ul>
+              <li>Run workshops on-campus to educate students on Microsoft Technologies and other tech-related skills</li>
+              <li>Attend hackathons and mentor hackers to develop their understanding technology</li>
+            </ul>
             <h4>
                 <span>Assistant Director of BostonHacks</span>
                 <span className="work-date">April 2015 - Present</span>
@@ -70,25 +78,29 @@ module.exports = React.createClass({
               <li>Solicit recruiters and industry representatives to meet obtain sponsorhip for event</li>
               <li>Move supplies, set up props & decorations, and perform other necessary handywork in high stress environment during the 24hr event</li>
             </ul>
-              <ul>
-                <li>Run workshops on-campus to educate students on Microsoft Technologies and other tech-related skills</li>
-                <li>Attend hackathons and mentor hackers to develop their understanding technology</li>
-              </ul>
             <h4>
               <span>Treasurer of MakeBU</span>
               <span className="work-date">May 2015 - Present</span>
             </h4>
             <ul>
               <li>Filed and submitted funding requests to Student Activities Organization to cover ~$70,000 hackathon budget</li>
-              <li></li>
+              <li>Attend and invite guest speakers to MakeBU weekly hack nights</li>
             </ul>
 
           </div>
           {/*box for college education */}
-          <div id="EducationBox" className="resume-box col-sm-4 col-xs-12">
+          <div id="EducationBox" className="resume-box col-xs-12">
             <h2>Education</h2>
-          </div>
+            <h4>
+              <span>Boston University</span>
+              <span className="work-date">Fall 2014 - Spring 2017 (expected) </span>
+            <br />
+              <span>B.S. Computer Engineering, Technology Innovation Concentration</span>
+              <span className="work-date">3.50 GPA</span>
+            </h4>
 
+
+          </div>
       </div>
     )
   }

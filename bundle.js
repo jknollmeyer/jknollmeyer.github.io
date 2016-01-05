@@ -147,10 +147,30 @@ var React = require('react');
 module.exports = React.createClass({displayName: "exports",
   render: function(){
     return(
-      React.createElement("div", null, 
-        React.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor ac odio non mollis. Mauris tincidunt pretium vehicula. In sollicitudin, augue a tempor laoreet, tellus lectus ultrices justo, vitae semper diam libero ut dolor. Mauris mattis ornare elementum. Pellentesque sed volutpat dolor. Ut maximus gravida pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam commodo nisl ac posuere accumsan. Quisque non maximus ante. Sed sem lectus, vehicula nec lacus eu, tempus ullamcorper risus. Pellentesque purus nisi, aliquet eu diam eu, gravida tempor turpis."), 
-        React.createElement("p", null, "Morbi malesuada volutpat erat, et eleifend diam posuere sit amet. Nullam blandit eget enim auctor porta. Donec tincidunt efficitur nisi, feugiat vestibulum lectus pharetra eu. Nulla dictum diam id enim malesuada, vel auctor erat commodo. Donec finibus eu metus eget dictum. Phasellus volutpat pulvinar arcu at tempus. Nunc aliquam enim in metus venenatis, at egestas turpis dignissim. Aliquam nisi odio, vestibulum sit amet rhoncus ut, pellentesque ac turpis. Quisque efficitur nec leo in luctus. Sed imperdiet pharetra mattis."), 
-        React.createElement("p", null, "Aenean eu sapien sagittis, molestie arcu eget, imperdiet erat. Cras blandit tempor accumsan. Aenean mollis libero a augue iaculis semper. Quisque in malesuada nisl. Duis eget augue euismod, placerat nisi quis, imperdiet nunc. Pellentesque suscipit auctor risus, ac tempus odio imperdiet at. Nam sit amet mollis purus. Vivamus laoreet sit amet lectus id viverra. Curabitur consequat nisl elit, vitae feugiat augue fringilla elementum. Fusce gravida orci nibh, sit amet consequat diam dictum nec. Quisque volutpat tortor sed enim malesuada scelerisque. Proin pellentesque posuere nisi et faucibus. Nunc magna diam, viverra sed pellentesque id, ornare nec metus. Phasellus fermentum ex sed nisl dignissim maximus. Sed non nunc faucibus, pharetra mauris non, finibus nunc.Aenean eu sapien sagittis, molestie arcu eget, imperdiet erat. Cras blandit tempor accumsan. Aenean mollis libero a augue iaculis semper. Quisque in malesuada nisl. Duis eget augue euismod, placerat nisi quis, imperdiet nunc. Pellentesque suscipit auctor risus, ac tempus odio imperdiet at. Nam sit amet mollis purus. Vivamus laoreet sit amet lectus id viverra. Curabitur consequat nisl elit, vitae feugiat augue fringilla elementum. Fusce gravida orci nibh, sit amet consequat diam dictum nec. Quisque volutpat tortor sed enim malesuada scelerisque. Proin pellentesque posuere nisi et faucibus. Nunc magna diam, viverra sed pellentesque id, ornare nec metus. Phasellus fermentum ex sed nisl dignissim maximus. Sed non nunc faucibus, pharetra mauris non, finibus nunc. ")
+      React.createElement("div", {style: {fontSize: '16pt'}}, 
+        React.createElement("h2", {style: {color: '#3399ff'}}, "My name is John, I'm an asipring software developer, currently studying Computer Engineering at Boston University"), 
+        React.createElement("br", null), 
+        React.createElement("p", null, "I've been enthralled by computer technology ever since I started breaking down and assembling PC's in grade school. I've built on this with high school and college computer engineering classes, and love building software and hardware for just for fun."), 
+        React.createElement("br", null), 
+        React.createElement("p", null, "What have I been doing in college you ask?"), 
+          React.createElement("ul", null, 
+            React.createElement("li", null, "Building cool projects at various hackathons"), 
+            React.createElement("li", null, "Running BostonHacks at BU"), 
+            React.createElement("li", null, "Hanging out at MakeBU's Hack Nights"), 
+            React.createElement("li", null, "Coding some side projects"), 
+            React.createElement("li", null, "Performing research in one of BU's labs")
+          ), 
+        React.createElement("br", null), 
+        React.createElement("p", null, "When I'm not occupied with those, I'm usually running along the Esplanade, sailing on the Charles, and playing basketball at FitRec"), 
+
+        React.createElement("h2", {style: {color: '#3399ff'}}, "Where you can find me"), 
+        React.createElement("p", null, React.createElement("a", {style: {color: "white"}, href: "https://github.com/jknollmeyer"}, 
+          "GitHub ", React.createElement("img", {src: "img/github2.png"})
+
+        )), 
+      React.createElement("p", null, React.createElement("a", {href: "http://www.linkedin.com/in/jknollmeyer", style: {color: "white"}}, 
+          "LinkedIn ", React.createElement("img", {src: "img/linkedin.png"})
+      ))
       )
     )
   }
@@ -194,7 +214,8 @@ module.exports = React.createClass({displayName: "exports",
               React.createElement("li", null, "Node.js Express"), 
               React.createElement("li", null, "Angular.js"), 
               React.createElement("li", null, "MongoDB"), 
-              React.createElement("li", null, "Django")
+              React.createElement("li", null, "Django"), 
+              React.createElement("li", null, "Scikit-learn")
             ), 
             React.createElement("h4", null, "Hardware Technologies"), 
             React.createElement("ul", null, 
@@ -205,7 +226,8 @@ module.exports = React.createClass({displayName: "exports",
               React.createElement("ul", null, 
                 React.createElement("li", null, "Machine Learning"), 
                 React.createElement("li", null, "Scientific Writing"), 
-                React.createElement("li", null, "Medical Imaging")
+                React.createElement("li", null, "Medical Imaging"), 
+                React.createElement("li", null, "Cloud Computing")
               )
         ), 
         /*Box for work experience */
@@ -214,7 +236,9 @@ module.exports = React.createClass({displayName: "exports",
           React.createElement("h4", null, React.createElement("span", null, "Research Assistant at BU PEAC Lab"), 
               React.createElement("span", {className: "work-date"}, "April 2015 - Present")), 
             React.createElement("ul", null, 
-              React.createElement("li", null)
+              React.createElement("li", null, "Create Bash scripts to collect filesystem data from application installations from Virtual Machines in Google Compute Engine"), 
+              React.createElement("li", null, "Create Python scripts for labeling experimental data using scit-kit learn"), 
+              React.createElement("li", null, "Describe experimental methodology in academic research paper")
             ), 
           React.createElement("h4", null, React.createElement("span", null, "Imaging R&D Intern at Neurologica"), 
               React.createElement("span", {className: "work-date"}, "May 2014 - August 2014")), 
@@ -230,6 +254,10 @@ module.exports = React.createClass({displayName: "exports",
               React.createElement("span", null, "Microsoft Student Partner"), 
               React.createElement("span", {className: "work-date"}, "September 2015 - Present")
             ), 
+            React.createElement("ul", null, 
+              React.createElement("li", null, "Run workshops on-campus to educate students on Microsoft Technologies and other tech-related skills"), 
+              React.createElement("li", null, "Attend hackathons and mentor hackers to develop their understanding technology")
+            ), 
             React.createElement("h4", null, 
                 React.createElement("span", null, "Assistant Director of BostonHacks"), 
                 React.createElement("span", {className: "work-date"}, "April 2015 - Present")
@@ -239,25 +267,29 @@ module.exports = React.createClass({displayName: "exports",
               React.createElement("li", null, "Solicit recruiters and industry representatives to meet obtain sponsorhip for event"), 
               React.createElement("li", null, "Move supplies, set up props & decorations, and perform other necessary handywork in high stress environment during the 24hr event")
             ), 
-              React.createElement("ul", null, 
-                React.createElement("li", null, "Run workshops on-campus to educate students on Microsoft Technologies and other tech-related skills"), 
-                React.createElement("li", null, "Attend hackathons and mentor hackers to develop their understanding technology")
-              ), 
             React.createElement("h4", null, 
               React.createElement("span", null, "Treasurer of MakeBU"), 
               React.createElement("span", {className: "work-date"}, "May 2015 - Present")
             ), 
             React.createElement("ul", null, 
               React.createElement("li", null, "Filed and submitted funding requests to Student Activities Organization to cover ~$70,000 hackathon budget"), 
-              React.createElement("li", null)
+              React.createElement("li", null, "Attend and invite guest speakers to MakeBU weekly hack nights")
             )
 
           ), 
           /*box for college education */
-          React.createElement("div", {id: "EducationBox", className: "resume-box col-sm-4 col-xs-12"}, 
-            React.createElement("h2", null, "Education")
-          )
+          React.createElement("div", {id: "EducationBox", className: "resume-box col-xs-12"}, 
+            React.createElement("h2", null, "Education"), 
+            React.createElement("h4", null, 
+              React.createElement("span", null, "Boston University"), 
+              React.createElement("span", {className: "work-date"}, "Fall 2014 - Spring 2017 (expected) "), 
+            React.createElement("br", null), 
+              React.createElement("span", null, "B.S. Computer Engineering, Technology Innovation Concentration"), 
+              React.createElement("span", {className: "work-date"}, "3.50 GPA")
+            )
 
+
+          )
       )
     )
   }

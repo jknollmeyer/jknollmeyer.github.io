@@ -2,10 +2,30 @@ var React = require('react');
 module.exports = React.createClass({
   render: function(){
     return(
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor ac odio non mollis. Mauris tincidunt pretium vehicula. In sollicitudin, augue a tempor laoreet, tellus lectus ultrices justo, vitae semper diam libero ut dolor. Mauris mattis ornare elementum. Pellentesque sed volutpat dolor. Ut maximus gravida pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam commodo nisl ac posuere accumsan. Quisque non maximus ante. Sed sem lectus, vehicula nec lacus eu, tempus ullamcorper risus. Pellentesque purus nisi, aliquet eu diam eu, gravida tempor turpis.</p>
-        <p>Morbi malesuada volutpat erat, et eleifend diam posuere sit amet. Nullam blandit eget enim auctor porta. Donec tincidunt efficitur nisi, feugiat vestibulum lectus pharetra eu. Nulla dictum diam id enim malesuada, vel auctor erat commodo. Donec finibus eu metus eget dictum. Phasellus volutpat pulvinar arcu at tempus. Nunc aliquam enim in metus venenatis, at egestas turpis dignissim. Aliquam nisi odio, vestibulum sit amet rhoncus ut, pellentesque ac turpis. Quisque efficitur nec leo in luctus. Sed imperdiet pharetra mattis.</p>
-        <p>Aenean eu sapien sagittis, molestie arcu eget, imperdiet erat. Cras blandit tempor accumsan. Aenean mollis libero a augue iaculis semper. Quisque in malesuada nisl. Duis eget augue euismod, placerat nisi quis, imperdiet nunc. Pellentesque suscipit auctor risus, ac tempus odio imperdiet at. Nam sit amet mollis purus. Vivamus laoreet sit amet lectus id viverra. Curabitur consequat nisl elit, vitae feugiat augue fringilla elementum. Fusce gravida orci nibh, sit amet consequat diam dictum nec. Quisque volutpat tortor sed enim malesuada scelerisque. Proin pellentesque posuere nisi et faucibus. Nunc magna diam, viverra sed pellentesque id, ornare nec metus. Phasellus fermentum ex sed nisl dignissim maximus. Sed non nunc faucibus, pharetra mauris non, finibus nunc.Aenean eu sapien sagittis, molestie arcu eget, imperdiet erat. Cras blandit tempor accumsan. Aenean mollis libero a augue iaculis semper. Quisque in malesuada nisl. Duis eget augue euismod, placerat nisi quis, imperdiet nunc. Pellentesque suscipit auctor risus, ac tempus odio imperdiet at. Nam sit amet mollis purus. Vivamus laoreet sit amet lectus id viverra. Curabitur consequat nisl elit, vitae feugiat augue fringilla elementum. Fusce gravida orci nibh, sit amet consequat diam dictum nec. Quisque volutpat tortor sed enim malesuada scelerisque. Proin pellentesque posuere nisi et faucibus. Nunc magna diam, viverra sed pellentesque id, ornare nec metus. Phasellus fermentum ex sed nisl dignissim maximus. Sed non nunc faucibus, pharetra mauris non, finibus nunc. </p>
+      <div style={{fontSize: '16pt'}}>
+        <h2 style={{color: '#3399ff'}}>My name is John, I'm an asipring software developer, currently studying Computer Engineering at Boston University</h2>
+        <br/>
+        <p>I've been enthralled by computer technology ever since I started breaking down and assembling PC's in grade school. I've built on this with high school and college computer engineering classes, and love building software and hardware for just for fun.</p>
+        <br />
+        <p>What have I been doing in college you ask?</p>
+          <ul>
+            <li>Building cool projects at various hackathons</li>
+            <li>Running BostonHacks at BU</li>
+            <li>Hanging out at MakeBU's Hack Nights</li>
+            <li>Coding some side projects</li>
+            <li>Performing research in one of BU's labs</li>
+          </ul>
+        <br />
+        <p>When I'm not occupied with those, I'm usually running along the Esplanade, sailing on the Charles, and playing basketball at FitRec</p>
+
+        <h2 style={{color: '#3399ff'}}>Where you can find me</h2>
+        <p><a style={{color: "white" }} href="https://github.com/jknollmeyer">
+          GitHub <img src="img/github2.png" />
+
+        </a></p>
+      <p><a href="http://www.linkedin.com/in/jknollmeyer" style={{color: "white"}}>
+          LinkedIn <img src="img/linkedin.png"/>
+      </a></p>
       </div>
     )
   }
