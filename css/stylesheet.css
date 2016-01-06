@@ -11,7 +11,7 @@ body{
 }
 #footer{
   color: grey;
-  font-size: 14pt;
+  font-size: 12pt;
   margin-top: 10%;
   text-align: center;
 }
@@ -44,4 +44,4 @@ body{
 
 .resume-box{ font-size: 12pt;}
 .resume-box h2{ color: #3399ff;}
-.work-date{position:absolute; right: 0em; font-style: italic;}
+.work-date{float: right; display: inline-block; font-style: italic;}

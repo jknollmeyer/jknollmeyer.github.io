@@ -36,13 +36,13 @@ var MenuItem = React.createClass({displayName: "MenuItem",
     }
     if(this.props.status == "Splash")
       return(
-        React.createElement("div", {className: "col-xs-4"}, 
+        React.createElement("div", {className: "col-xs-6"}, 
           React.createElement("span", {className: className, onClick: this.props.onClick})
         )
       )
     else
       return(
-        React.createElement("div", {className: "col-xs-3"}, 
+        React.createElement("div", {className: "col-xs-4"}, 
           React.createElement("span", {className: className, onClick: this.props.onClick})
         )
       )
@@ -68,8 +68,8 @@ var PageHTML = React.createClass({displayName: "PageHTML",
           React.createElement("div", {className: "row", id: "menuBar"}, 
             React.createElement(MenuItem, {id: "Splash", status: this.state.status, onClick: splashClick}), 
             React.createElement(MenuItem, {id: "AboutMe", status: this.state.status, onClick: aboutClick}), 
-            React.createElement(MenuItem, {id: "Resume", status: this.state.status, onClick: resumeClick}), 
-            React.createElement(MenuItem, {id: "Contact", status: this.state.status, onClick: contactClick})
+            React.createElement(MenuItem, {id: "Resume", status: this.state.status, onClick: resumeClick})
+            /*<MenuItem id="Contact" status={this.state.status} onClick={contactClick}/> */
           )
         ), 
         React.createElement("div", {id: "bodyContent", style: this.state.bodyStyle}, 
@@ -154,11 +154,11 @@ module.exports = React.createClass({displayName: "exports",
         React.createElement("br", null), 
         React.createElement("p", null, "What have I been doing in college you ask?"), 
           React.createElement("ul", null, 
-            React.createElement("li", null, "Building cool projects at various hackathons"), 
-            React.createElement("li", null, "Running BostonHacks at BU"), 
-            React.createElement("li", null, "Hanging out at MakeBU's Hack Nights"), 
-            React.createElement("li", null, "Coding some side projects"), 
-            React.createElement("li", null, "Performing research in one of BU's labs")
+            React.createElement("li", null, "Building cool ", React.createElement("a", {href: "http://devpost.com/jknollmeyer"}, "projects"), " at various hackathons"), 
+            React.createElement("li", null, "Running ", React.createElement("a", {href: "https://bostonhacks.io/"}, "BostonHacks"), " at BU"), 
+            React.createElement("li", null, "Hanging out at ", React.createElement("a", {href: "https://www.facebook.com/makebu"}, "MakeBU"), "'s Hack Nights"), 
+            React.createElement("li", null, "Coding some ", React.createElement("a", {href: "https://github.com/jknollmeyer"}, "side projects")), 
+            React.createElement("li", null, "Performing research in one of ", React.createElement("a", {href: "http://www.bu.edu/peaclab/"}, "BU's laboratories"))
           ), 
         React.createElement("br", null), 
         React.createElement("p", null, "When I'm not occupied with those, I'm usually running along the Esplanade, sailing on the Charles, and playing basketball at FitRec"), 
@@ -171,8 +171,8 @@ module.exports = React.createClass({displayName: "exports",
         React.createElement("p", null, React.createElement("a", {href: "http://www.linkedin.com/in/jknollmeyer", style: {color: "white"}}, 
             "LinkedIn ", React.createElement("img", {src: "img/linkedin.png"})
         )), 
-        React.createElement("div", {id: "footer"}, 
-          "FOFOFOFO"
+        React.createElement("div", {id: "footer", className: "col-xs-12"}, 
+          "Created using ", React.createElement("a", {href: "http://getbootstrap.com/"}, "Bootstrap"), " and ", React.createElement("a", {href: "https://facebook.github.io/react/"}, "React"), ". Updated January 2016."
         )
       )
     )
@@ -294,7 +294,7 @@ module.exports = React.createClass({displayName: "exports",
 
           ), 
           React.createElement("div", {id: "footer", className: "col-xs-12"}, 
-            "FOFOFOFO"
+            "Created using ", React.createElement("a", {href: "http://getbootstrap.com/"}, "Bootstrap"), " and ", React.createElement("a", {href: "https://facebook.github.io/react/"}, "React"), ". Updated January 2016."
           )
       )
     )

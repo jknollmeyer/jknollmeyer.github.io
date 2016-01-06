@@ -35,13 +35,13 @@ var MenuItem = React.createClass({
     }
     if(this.props.status == "Splash")
       return(
-        <div className="col-xs-4">
+        <div className="col-xs-6">
           <span className={className} onClick={this.props.onClick}></span>
         </div>
       )
     else
       return(
-        <div className="col-xs-3">
+        <div className="col-xs-4">
           <span className={className} onClick={this.props.onClick}></span>
         </div>
       )
@@ -68,7 +68,7 @@ var PageHTML = React.createClass({
             <MenuItem id="Splash" status={this.state.status} onClick={splashClick}/>
             <MenuItem id="AboutMe" status={this.state.status} onClick={aboutClick}/>
             <MenuItem id="Resume" status={this.state.status} onClick={resumeClick}/>
-            <MenuItem id="Contact" status={this.state.status} onClick={contactClick}/>
+            {/*<MenuItem id="Contact" status={this.state.status} onClick={contactClick}/> */}
           </div>
         </div>
         <div id="bodyContent" style={this.state.bodyStyle}>

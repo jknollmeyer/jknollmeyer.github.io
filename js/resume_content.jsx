@@ -102,7 +102,7 @@ module.exports = React.createClass({
 
           </div>
           <div id="footer" className="col-xs-12">
-            FOFOFOFO
+            Created using <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="https://facebook.github.io/react/">React</a>. Updated January 2016.
           </div>
       </div>
     )
