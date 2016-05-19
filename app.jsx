@@ -1,52 +1,63 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var AboutContent = require('./js/about_content.jsx')
-var ResumeContent = require('./js/resume_content.jsx')
-var ContactContent = require('./js/contact_content.jsx')
+var AboutContent = require('./js/about_content.jsx');
+var ResumeContent = require('./js/resume_content.jsx');
+var ContactContent = require('./js/contact_content.jsx');
+var ProjectsContent = require('./js/projects_content.jsx');
+
 var BodyContent = React.createClass({
   render: function(){
     if(this.props.status == "Splash")
       return (
         <div></div>
-      )
+      );
     if(this.props.status == "AboutMe")
       return (
         <AboutContent />
-      )
+      );
     if(this.props.status == "Resume")
       return (
         <ResumeContent />
-      )
+      );
     if(this.props.status == "Contact")
       return(
         <ContactContent />
-      )
+      );
+    if(this.props.status == "Projects")
+        return(
+            <ProjectsContent />
+        );
   }
 });
+
+
 var MenuItem = React.createClass({
   render: function(){
-    var className = "glyphicon glyph-title"
+    var className = "glyphicon glyph-title";
     if(this.props.id == "AboutMe") className += " glyphicon-user";
-    if(this.props.id == "Resume") className += " glyphicon-list-alt";
+    if(this.props.id == "Resume") className += " glyphicon-briefcase";
     if(this.props.id == "Contact") className += " glyphicon-comment";
+    if(this.props.id == "Projects") className += " glyphicon-th-list";
     if(this.props.id == "Splash"){
-      if(this.props.status == "Splash") return(<div></div>)
+      if(this.props.status == "Splash") return(<div></div>);
       className += " glyphicon-home";
     }
     if(this.props.status == "Splash")
       return(
-        <div className="col-xs-6">
-          <span className={className} onClick={this.props.onClick}></span>
-        </div>
-      )
-    else
-      return(
         <div className="col-xs-4">
           <span className={className} onClick={this.props.onClick}></span>
         </div>
-      )
+      );
+    else
+      return(
+        <div className="col-xs-3">
+          <span className={className} onClick={this.props.onClick}></span>
+        </div>
+      );
   }
 });
+
+
 var PageHTML = React.createClass({
   getInitialState: function(){
     return {status: 'Splash', bodyStyle: {}, splashStyle: {}};
@@ -57,6 +68,7 @@ var PageHTML = React.createClass({
     var resumeClick = this.menuClick.bind(this, 'Resume');
     var contactClick = this.menuClick.bind(this, 'Contact');
     var splashClick = this.menuClick.bind(this, 'Splash');
+    var projectsClick = this.menuClick.bind(this, "Projects");
     return(
       <div>
         <div id="titleContent">
@@ -66,6 +78,7 @@ var PageHTML = React.createClass({
           </div>
           <div className="row" id="menuBar">
             <MenuItem id="Splash" status={this.state.status} onClick={splashClick}/>
+            <MenuItem id="Projects" status={this.state.status} onClick={projectsClick}/>
             <MenuItem id="AboutMe" status={this.state.status} onClick={aboutClick}/>
             <MenuItem id="Resume" status={this.state.status} onClick={resumeClick}/>
             {/*<MenuItem id="Contact" status={this.state.status} onClick={contactClick}/> */}
