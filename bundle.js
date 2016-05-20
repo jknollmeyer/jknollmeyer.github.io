@@ -250,7 +250,9 @@ module.exports = React.createClass({displayName: "exports",
                     React.createElement("br", null), 
                     React.createElement("a", {href: "https://github.com/jknollmeyer/debate-lingo"}, 
                         "GitHub Repository"
-                    )
+                    ), 
+                    React.createElement("br", null), 
+                    "Published May 2016"
                 )
             )
         );

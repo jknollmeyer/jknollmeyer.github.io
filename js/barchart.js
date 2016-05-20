@@ -1,6 +1,6 @@
 var margin = {top: 50, right: 20, bottom: 100, left: 70},
     width = 700 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    height = 450 - margin.top - margin.bottom;
 
 var headshots = {
     TRUMP: "img/trump_headshot.jpg",
