@@ -1,4 +1,4 @@
-var margin = {top: 20, right: 20, bottom: 100, left: 70},
+var margin = {top: 50, right: 20, bottom: 100, left: 70},
     width = 700 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
@@ -70,6 +70,15 @@ d3.csv("data/sentiment_results.csv", function(error, data) {
         .attr("dy", ".71em")
         .style("text-anchor", "middle")
         .text("Proportion of 'positive' sentences");
+    // Create the title
+    svg.append("g")
+        .append("text")
+        .attr("x", (width / 2))
+        .attr("y", 0 - (margin.top/2))
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .style("text-decoration", "underline")
+        .text("\"Positivity\" by Candidate");
 
     // Create the bars
     svg.selectAll("bar")
