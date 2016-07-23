@@ -23,7 +23,7 @@ gulp.task('watch', function(){
   gulp.watch(paths.app_js, ['js']);
   gulp.watch(paths.js, ['js']);
 });
-gulp.task('default', ['watch']);
+gulp.task('default', ['js', 'watch']);
 
 function onError(err){
   console.log(err);
